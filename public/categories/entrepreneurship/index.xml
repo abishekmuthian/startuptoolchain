@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Entrepreneurship on Startup toolchain</title>
+    <link>https://startuptoolchain.com/categories/entrepreneurship/</link>
+    <description>Recent content in Entrepreneurship on Startup toolchain</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 09 Nov 2019 02:52:31 +0000</lastBuildDate>
+    
+	<atom:link href="https://startuptoolchain.com/categories/entrepreneurship/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Validating Problems</title>
+      <link>https://startuptoolchain.com/posts/tools-for-validating-problems/</link>
+      <pubDate>Sat, 09 Nov 2019 02:52:31 +0000</pubDate>
+      
+      <guid>https://startuptoolchain.com/posts/tools-for-validating-problems/</guid>
+      <description>If there is one thing which can determine whether a startup can succeed or fail even before it has been started is analysing the problem which that startup is trying to solve.</description>
+    </item>
+    
+    <item>
+      <title>Validating Problems</title>
+      <link>https://startuptoolchain.com/posts/tools-for-validating-problems/</link>
+      <pubDate>Sat, 09 Nov 2019 02:52:31 +0000</pubDate>
+      
+      <guid>https://startuptoolchain.com/posts/tools-for-validating-problems/</guid>
+      <description>If there is one thing which can determine whether a startup can succeed or fail even before it has been started is analysing the problem which that startup is trying to solve.</description>
+    </item>
+    
+  </channel>
+</rss>

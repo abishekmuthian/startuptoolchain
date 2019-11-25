@@ -1,0 +1,32 @@
+# Site settings
+baseurl = "https://startuptoolchain.com/"
+languageCode = "en-us"
+title = "Startup Toolchain"
+theme = "hugrid"
+# Enter your tracking code to enable Google Analytics
+googleAnalytics = "UA-XXXXXXXX-Y"
+
+contentdir = "content"
+datadir = "data"
+layoutdir = "layouts"
+publishdir = "public"
+
+[params]
+    # Meta
+    title = "Startup Toolchain"
+    subtitle = "Single best tool for your startup task, a toolchain for your entire startup."
+    author = "Abishek Muthian"
+    description = "Single best tool for your startup task, a toolchain for your entire startup."
+    keywords = "Hugo, Hugo theme, grid theme, portfolio, bookmarks, collection, contacts"
+
+    # Body background color
+    bodybgcolor = "#FF9800"
+
+    # Preview container button text
+    buttontext = "Get it"
+
+    # Footer text
+    footertext = "Made by [Codrops](http://tympanus.net/codrops/2013/03/19/thumbnail-grid-with-expanding-preview/), [Hugo](http://gohugo.io) and [me](https://github.com/aerohub)"
+
+    # add extra-css
+    # custom_css = ['css/extra1.css', 'css/extra2.css']
