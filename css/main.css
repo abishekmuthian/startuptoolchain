@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,300italic,400italic&display=swap");
+h1 {
+  margin-bottom: 2.5em;
+}
+a {
+  color: #f57c00;
+}
+a:hover {
+  color: #ff9800;
+}
+.tooltip,
+.container__validation:before,
+.container__startupcoach:before,
+.container__teambuilding:before,
+.container__promotion:before,
+.container__cloud:before,
+.container__build:before,
+.container__deploy:before {
+  position: absolute;
+  right: 0;
+  bottom: 100%;
+  color: #ffe0b2;
+  background: #ff9800;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 2.5px;
+}
+.card,
+.container__validation div,
+.container__startupcoach div,
+.container__teambuilding div,
+.container__promotion div,
+.container__cloud div,
+.container__build div {
+  line-height: 2;
+  background: #ffe0b2;
+  padding: 1.2rem 1rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px #ffcf87;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  min-height: 100vh;
+  width: 100%;
+  font-family: 'Roboto';
+  color: #212121;
+  background: #f57c00;
+}
+.container {
+  margin: 5vh 2.5vw;
+  padding: 15vh 0;
+  background: #ffe0b2;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.container svg {
+  height: 5rem;
+}
+.container svg line {
+  stroke: #f57c00;
+  stroke-width: 3px;
+  stroke-linecap: round;
+  stroke-dasharray: 2px 20px;
+  animation: animateline 5s linear both infinite;
+}
+h3 {
+  font-size: 1.1rem;
+  color: #191919;
+}
+p {
+  font-size: 0.95rem;
+  font-weight: 300;
+}
+.container__validation {
+  display: flex;
+  border-radius: 8px;
+  padding: 1.5rem;
+  background: #ffdca7;
+  position: relative;
+}
+.container__validation:before {
+  content: 'Validation';
+}
+.container__validation div {
+  text-align: left;
+  margin: 0 1rem;
+}
+.container__startupcoach {
+  display: flex;
+  border-radius: 8px;
+  padding: 1.5rem;
+  background: #ffdca7;
+  position: relative;
+}
+.container__startupcoach:before {
+  content: 'Startup Coaching';
+}
+.container__startupcoach div {
+  text-align: left;
+  margin: 0 1rem;
+}
+.container__teambuilding {
+  display: flex;
+  border-radius: 8px;
+  padding: 1.5rem;
+  background: #ffdca7;
+  position: relative;
+}
+.container__teambuilding:before {
+  content: 'Team Building';
+}
+.container__teambuilding div {
+  text-align: left;
+  margin: 0 1rem;
+}
+.container__promotion {
+  display: flex;
+  border-radius: 8px;
+  padding: 1.5rem;
+  background: #ffdca7;
+  position: relative;
+}
+.container__promotion:before {
+  content: 'Promotion';
+}
+.container__promotion div {
+  text-align: left;
+  margin: 0 1rem;
+}
+.container__cloud {
+  display: flex;
+  border-radius: 8px;
+  padding: 1.5rem;
+  background: #ffdca7;
+  position: relative;
+}
+.container__cloud:before {
+  content: 'Cloud';
+}
+.container__cloud div {
+  text-align: left;
+  margin: 0 1rem;
+}
+.container__build {
+  padding: 10vh 10vw;
+  border-radius: 8px;
+  background: #ffdca7;
+  position: relative;
+}
+.container__build:before {
+  content: 'build';
+}
+.container__build div {
+  margin: 2rem 0;
+}
+.container__build div svg {
+  width: 4rem;
+  height: auto;
+  fill: #f57c00;
+}
+.container__deploy {
+  background: #ffdca7;
+  padding: 1.5rem;
+  border-radius: 8px;
+  position: relative;
+}
+.container__deploy:before {
+  content: 'deploy';
+}
+@media (max-width: 700px) {
+  .container__validation,
+  .container__startupcoach,
+  .container__teambuilding,
+  .container__promotion,
+  .container__cloud {
+    flex-direction: column;
+  }
+  .container__validation div,
+  .container__startupcoach div,
+  .container__teambuilding div,
+  .container__promotion div,
+  .container__cloud div {
+    margin: 1rem 0;
+  }
+}
+@-moz-keyframes animateline {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -5rem;
+  }
+}
+@-webkit-keyframes animateline {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -5rem;
+  }
+}
+@-o-keyframes animateline {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -5rem;
+  }
+}
+@keyframes animateline {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -5rem;
+  }
+}

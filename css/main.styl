@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,300italic,400italic&display=swap')
+
+font-text = 'Roboto'
+color-text = #212121
+color-card = #FFE0B2
+color-step = #FF9800
+color-bg = #F57C00
+
+//Title
+h1
+    margin-bottom 2.5em
+
+//Anchor
+a
+    color: color-bg
+
+a:hover         
+    color: color-step
+
+// create a class shared by all pseudo elements depicting a step of the flow (each altering only the content property)
+.tooltip
+    // position the tooltip in the top right of the container
+    position absolute
+    right 0
+    bottom 100%
+    // style the tooltip with the chosen color values
+    color color-card
+    background color-step
+    text-transform uppercase
+    font-size 0.9rem
+    padding 0.25rem 0.75rem
+    border-radius 2.5px
+
+// create a class shared by all cards
+.card
+    line-height 2
+    background color-card
+    padding 1.2rem 1rem
+    border-radius 4px
+    box-shadow 0 2px 10px darken(color-card, 10%)
+*
+    box-sizing border-box
+    margin 0
+    padding 0
+
+body
+    min-height 100vh
+    width 100%
+    font-family font-text
+    color color-text
+    background color-bg
+
+// separate the main container from the surrounding page
+.container
+    margin 5vh 2.5vw
+    padding 15vh 0
+    background color-card
+    border-radius 5px
+    // display the content in a single column layout
+    display flex
+    flex-direction column
+    // center the content
+    align-items center
+    text-align center
+
+    // for the SVG separating the containers, set a reasonable height
+    svg
+        height 5rem
+        line
+            stroke color-bg
+            stroke-width 3px
+            stroke-linecap round
+            // include a stroke-dasharray depicting small dots separated by considerable space
+            stroke-dasharray 2px 20px
+            // animate the stroke-dashoffset property to move the dotted line downward
+            animation animateline 5s linear both infinite
+
+// style all headings and paragraphs with the same values
+h3
+    font-size 1.1rem
+    color darken(color-text, 25%)
+p
+    font-size 0.95rem
+    font-weight 300
+
+.container__validation
+    // display the contents of the first container in a single row
+    display flex
+    border-radius 8px
+    padding 1.5rem
+    background darken(color-card, 2.5%)
+    // position relative for the pseudo element
+    position relative
+
+    &:before
+        @extends .tooltip
+        content 'Validation'
+
+    div
+        // beside the properties shared by all cards, move the text to the left and separate the containers horizontally
+        @extends .card
+        text-align left
+        margin 0 1rem
+
+.container__startupcoach
+    // display the contents of the first container in a single row
+    display flex
+    border-radius 8px
+    padding 1.5rem
+    background darken(color-card, 2.5%)
+    // position relative for the pseudo element
+    position relative
+
+    &:before
+        @extends .tooltip
+        content 'Startup Coaching'
+
+    div
+        // beside the properties shared by all cards, move the text to the left and separate the containers horizontally
+        @extends .card
+        text-align left
+        margin 0 1rem    
+
+.container__teambuilding
+    // display the contents of the first container in a single row
+    display flex
+    border-radius 8px
+    padding 1.5rem
+    background darken(color-card, 2.5%)
+    // position relative for the pseudo element
+    position relative
+
+    &:before
+        @extends .tooltip
+        content 'Team Building'
+
+    div
+        // beside the properties shared by all cards, move the text to the left and separate the containers horizontally
+        @extends .card
+        text-align left
+        margin 0 1rem     
+
+.container__promotion
+    // display the contents of the first container in a single row
+    display flex
+    border-radius 8px
+    padding 1.5rem
+    background darken(color-card, 2.5%)
+    // position relative for the pseudo element
+    position relative
+
+    &:before
+        @extends .tooltip
+        content 'Promotion'
+
+    div
+        // beside the properties shared by all cards, move the text to the left and separate the containers horizontally
+        @extends .card
+        text-align left
+        margin 0 1rem  
+
+.container__cloud
+    // display the contents of the first container in a single row
+    display flex
+    border-radius 8px
+    padding 1.5rem
+    background darken(color-card, 2.5%)
+    // position relative for the pseudo element
+    position relative
+
+    &:before
+        @extends .tooltip
+        content 'Cloud'
+
+    div
+        // beside the properties shared by all cards, move the text to the left and separate the containers horizontally
+        @extends .card
+        text-align left
+        margin 0 1rem                      
+
+.container__build
+    // separate the second container decidedly from the surrounding items
+    // notably covering a portion of the page
+    padding 10vh 10vw
+    border-radius 8px
+    background darken(color-card, 2.5%)
+    // position relative for the pseudo element
+    position relative
+
+    &:before
+        @extends .tooltip
+        content 'build'
+
+    div
+        @extends .card
+        margin 2rem 0
+
+        // style the SVG used as icon to be 4rem wide/tall
+        svg
+            width 4rem
+            height auto
+            fill color-bg
+
+
+
+.container__deploy
+    // simply style the last container to share the same background of the other containers
+    background darken(color-card, 2.5%)
+    padding 1.5rem
+    border-radius 8px
+    // position relative for the pseudo element
+    position relative
+
+    &:before
+        @extends .tooltip
+        content 'deploy'
+
+
+
+// on smaller viewports lay the three cards on top of one another
+@media (max-width: 700px)
+    .container__validation 
+    .container__startupcoach
+    .container__teambuilding 
+    .container__promotion
+    .container__cloud      
+        flex-direction column
+
+        div
+            margin 1rem 0
+
+// animate the SVG line to show the dotted line moving downward
+// 5rem being the height of the SVG
+@keyframes animateline
+    from
+        stroke-dashoffset 0
+    to
+        stroke-dashoffset -5rem

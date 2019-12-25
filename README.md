@@ -1,2 +1,0 @@
-# startuptoolchain
-Website of startuptoolchain
