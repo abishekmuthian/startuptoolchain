@@ -10,6 +10,8 @@ color-bg = #F57C00
 h1
     margin-bottom 2.5em
 
+h2
+   margin 2.0em  
 //Anchor
 a
     color: color-bg
@@ -178,52 +180,43 @@ p
         text-align left
         margin 0 1rem                      
 
-.container__build
-    // separate the second container decidedly from the surrounding items
-    // notably covering a portion of the page
-    padding 10vh 10vw
+.container__container
+    // display the contents of the first container in a single row
+    display flex
     border-radius 8px
+    padding 1.5rem
     background darken(color-card, 2.5%)
     // position relative for the pseudo element
     position relative
 
     &:before
         @extends .tooltip
-        content 'build'
+        content 'Container'
 
     div
+        // beside the properties shared by all cards, move the text to the left and separate the containers horizontally
         @extends .card
-        margin 2rem 0
-
-        // style the SVG used as icon to be 4rem wide/tall
-        svg
-            width 4rem
-            height auto
-            fill color-bg
+        text-align left
+        margin 0 1rem  
 
 
-
-.container__deploy
-    // simply style the last container to share the same background of the other containers
-    background darken(color-card, 2.5%)
-    padding 1.5rem
-    border-radius 8px
-    // position relative for the pseudo element
-    position relative
-
-    &:before
-        @extends .tooltip
-        content 'deploy'
-
-
-
+footer {
+  padding: 0 0 1.5em 1.5em;
+}
+footer a{
+  color: #212121;
+}
+footer a:hover{
+  color: #FFE0B2;
+}
 // on smaller viewports lay the three cards on top of one another
 @media (max-width: 700px)
     .container__validation 
     .container__startupcoach
     .container__teambuilding 
     .container__promotion
-    .container__cloud      
+    .container__cloud
+    .container__container         
         flex-direction column
 
         div

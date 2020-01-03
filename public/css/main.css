@@ -2,6 +2,9 @@
 h1 {
   margin-bottom: 2.5em;
 }
+h2 {
+  margin: 2em;
+}
 a {
   color: #f57c00;
 }
@@ -14,8 +17,7 @@ a:hover {
 .container__teambuilding:before,
 .container__promotion:before,
 .container__cloud:before,
-.container__build:before,
-.container__deploy:before {
+.container__container:before {
   position: absolute;
   right: 0;
   bottom: 100%;
@@ -32,7 +34,7 @@ a:hover {
 .container__teambuilding div,
 .container__promotion div,
 .container__cloud div,
-.container__build div {
+.container__container div {
   line-height: 2;
   background: #ffe0b2;
   padding: 1.2rem 1rem;
@@ -149,45 +151,44 @@ p {
   text-align: left;
   margin: 0 1rem;
 }
-.container__build {
-  padding: 10vh 10vw;
+.container__container {
+  display: flex;
   border-radius: 8px;
-  background: #ffdca7;
-  position: relative;
-}
-.container__build:before {
-  content: 'build';
-}
-.container__build div {
-  margin: 2rem 0;
-}
-.container__build div svg {
-  width: 4rem;
-  height: auto;
-  fill: #f57c00;
-}
-.container__deploy {
-  background: #ffdca7;
   padding: 1.5rem;
-  border-radius: 8px;
+  background: #ffdca7;
   position: relative;
 }
-.container__deploy:before {
-  content: 'deploy';
+.container__container:before {
+  content: 'Container';
+}
+.container__container div {
+  text-align: left;
+  margin: 0 1rem;
+}
+footer {
+  padding: 0 0 1.5em 1.5em;
+}
+footer a {
+  color: #212121;
+}
+footer a:hover {
+  color: #ffe0b2;
 }
 @media (max-width: 700px) {
   .container__validation,
   .container__startupcoach,
   .container__teambuilding,
   .container__promotion,
-  .container__cloud {
+  .container__cloud,
+  .container__container {
     flex-direction: column;
   }
   .container__validation div,
   .container__startupcoach div,
   .container__teambuilding div,
   .container__promotion div,
-  .container__cloud div {
+  .container__cloud div,
+  .container__container div {
     margin: 1rem 0;
   }
 }

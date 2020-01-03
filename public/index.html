@@ -1,6 +1,24 @@
 <html>
     <head>
             <link rel="stylesheet" href="css/main.css">    
+            <meta name="description" content="Best tool for your startup task, A toolchain for your entire startup.">
+            <meta name="keywords" content="startup tools">
+            <meta name="mobile-web-app-capable" content="yes">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+            <meta property="article:author" content="Abishek Muthian" />
+            <meta property="og:url" content="https://startuptoolchain.com" />
+            <meta property="og:type" content="website" />
+            <meta property="og:title" content="StartupToolchain">
+            <meta property="og:description" content="Best tool for your startup task, A toolchain for your entire startup.">
+            <meta property="og:image" content="https://startuptoolchain.com/images/startuptoolchain.png" />
+            <meta property="og:image:alt" content="Best tool for your startup task, A toolchain for your entire startup." />
+            <meta name="twitter:site" content="@startuptoolchn" />
+            <meta name="twitter:title" content="StartupToolchain">
+            <meta name="twitter:description" content="Best tool for your startup task, A toolchain for your entire startup.">
+            <meta name="twitter:card" content="summary" />
+            <meta name="twitter:image" content="https://startuptoolchain.com/images/startuptoolchain.png" />
+            <meta name="twitter:image:alt" content="Best tool for your startup task, A toolchain for your entire startup." />   
     </head>
     <body>
         <!-- in a wrapping section include different containers for each step of the flow: data sources, build, deploy -->
@@ -13,7 +31,7 @@
       
           <div class="sources--problem">
             <h3>Problem</h3>
-            <p><a href="https://needgap.com" target="_blank">needgap</a></p>
+            <p><a href="https://needgap.com" target="_blank">needgap</a><sup>*</sup></p>
           </div>
       
           <div class="sources--startup idea">
@@ -37,7 +55,7 @@
       
           <div class="sources--personalised">
             <h3>Personalised</h3>
-            <p><a href="https://hitstartup.com" target="_blank">hitstartup</a></p>
+            <p><a href="https://hitstartup.com" target="_blank">hitstartup</a><sup>*</sup></p>
           </div>
       
           <div class="sources--generalised">
@@ -106,12 +124,36 @@
               <p><a href="https://www.digitalocean.com/" target="_blank">DigitalOcean</a></p>
               <p><a href="https://www.scaleway.com/en/" target="_blank">Scaleway</a></p>
             </div>
+
          </div> 
 
         <!-- include a simple line to divide the container, and animate it to show a connection between the different containers  -->
         <svg viewbox="0 0 10 100">
             <line x1="5" x2="5" y1="0" y2="100"/>
-        </svg> 
+        </svg>
+
+              <!-- in the sources container show three cards, side by side, or one atop the other on smaller viewports -->
+                <div class="container__container">      
+      
+                  <div class="sources--containerization">
+                    <h3>Containerization</h3>
+                    <p><a href="https://www.docker.com/" target="_blank">Docker</a></p>
+                    <p><a href="https://coreos.com/rkt/" target="_blank">rkt</a></p>
+                  </div>
+      
+                  <div class="sources--container-orchestration">
+                    <h3>Container Orchestration</h3>
+                    <p><a href="https://kubernetes.io/" target="_blank">Kubernetes</a></p>
+                    <p><a href="https://www.openshift.com/" target="_blank">OpenShift</a></p>
+                    <p><a href="https://www.cloudfoundry.org/" target="_blank">Cloud Foundry</a></p>
+                  </div>
+      
+               </div> 
+      
+              <!-- include a simple line to divide the container, and animate it to show a connection between the different containers  -->
+              <svg viewbox="0 0 10 100">
+                  <line x1="5" x2="5" y1="0" y2="100"/>
+              </svg> 
 
         <!-- in the sources container show three cards, side by side, or one atop the other on smaller viewports -->
          <div class="container__promotion">
@@ -148,39 +190,17 @@
              
           </div>
 
-        <!-- include a simple line to divide the container, and animate it to show a connection between the different containers  -->
-        <svg viewbox="0 0 10 100">
-            <line x1="5" x2="5" y1="0" y2="100"/>
-        </svg>
-      
-        <!-- in the build container show two cards, atop of one another and the first of one showing an SVG icon -->
-        <div class="container__build">
-      
-          <div class="build--powered">
-            <svg viewbox="0 0 100 100">
-              <circle cx="50" cy="50" r="50"/>
-            </svg>
-            <p>powered by</p>
-            <h3>GraphQL</h3>
-          </div>
-      
-          <div class="build--stack">
-              HTML · CSS · React
-          </div>
-      
-        </div>
-      
-        <!-- repeat the svg line to connect the second and third containers as well -->
-        <svg viewbox="0 0 10 100">
-          <line x1="5" x2="5" y1="0" y2="100"/>
-        </svg>
-      
-        <!-- in the deploy container show simply text, without a wrapping card -->
-        <div class="container__deploy">
-          <h3>Static Web Host</h3>
-          <p>Amazon S3, Netlify, GitHub Pages, Surge.sh, Aerobatic, Now.sh, & many more.</p>
-        </div>
-      
       </section>
+      <footer>
+        <p>
+          <a href="index.html">Home</a> | 
+          <a href="about.html">*About</a> | 
+          <a href="https://www.linkedin.com/company/startuptoolchain" target="_blank">LinkedIn</a> |
+          <a href="https://twitter.com/startuptoolchn" target="_blank">Twitter</a> |
+          <a href="https://www.facebook.com/startuptoolchain/" target="_blank">Facebook</a> |
+          <a href="license.html">License</a> | 
+          © StartupToolchain 2020.
+        </p>
+      </footer>
     </body>
 </html>    
