@@ -199,6 +199,43 @@ p
         text-align left
         margin 0 1rem  
 
+.container__website
+    // display the contents of the first container in a single row
+    display flex
+    border-radius 8px
+    padding 1.5rem
+    background darken(color-card, 2.5%)
+    // position relative for the pseudo element
+    position relative
+
+    &:before
+        @extends .tooltip
+        content 'Website'
+
+    div
+        // beside the properties shared by all cards, move the text to the left and separate the containers horizontally
+        @extends .card
+        text-align left
+        margin 0 1rem 
+
+ .container__design
+    // display the contents of the first container in a single row
+    display flex
+    border-radius 8px
+    padding 1.5rem
+    background darken(color-card, 2.5%)
+    // position relative for the pseudo element
+    position relative
+
+    &:before
+        @extends .tooltip
+        content 'Design'
+
+    div
+        // beside the properties shared by all cards, move the text to the left and separate the containers horizontally
+        @extends .card
+        text-align left
+        margin 0 1rem        
 
 footer {
   padding: 0 0 1.5em 1.5em;
@@ -216,7 +253,9 @@ footer a:hover{
     .container__teambuilding 
     .container__promotion
     .container__cloud
-    .container__container         
+    .container__container 
+    .container__website
+    .container__design                
         flex-direction column
 
         div
