@@ -27,21 +27,26 @@
         Startup Toolchain
     </h1>
         <!-- in the sources container show three cards, side by side, or one atop the other on smaller viewports -->
-        <div class="container__validation">
+        <div class="container__validation" id="validation">
       
-          <div class="sources--problem">
+          <div class="sources--problem" id="problem">
             <h3>Problem</h3>
             <p><a href="https://needgap.com" target="_blank">needgap</a><sup>*</sup></p>
           </div>
       
-          <div class="sources--startup idea">
+          <div class="sources--startup-idea" id="startup-idea">
             <h3>Startup Idea</h3>
             <p><a href="https://www.reddit.com/r/Startup_Ideas/" target="_blank">r/Startup_Idea</a></p>
           </div>
 
-          <div class="sources--hardware">
+          <div class="sources--hardware" id="hardware">
             <h3>Hardware</h3>
             <p><a href="https://www.reddit.com/r/hwstartups/" target="_blank">r/hwstartups</a></p>
+          </div>
+
+          <div class="sources--mvp" id="mvp">
+            <h3>MVP</h3>
+            <p><a href="https://www.indiehackers.com/" target="_blank">INDIE HACKERS</a></p>
           </div>
         </div>
 
@@ -51,14 +56,14 @@
           </svg>
 
         <!-- in the sources container show three cards, side by side, or one atop the other on smaller viewports -->
-        <div class="container__startupcoach">
+        <div class="container__startup-coaching" id="startup-coaching">
       
-          <div class="sources--personalised">
+          <div class="sources--personalised" id="personalised-startup-coaching">
             <h3>Personalised</h3>
             <p><a href="https://hitstartup.com" target="_blank">hitstartup</a><sup>*</sup></p>
           </div>
       
-          <div class="sources--generalised">
+          <div class="sources--generalised" id="generalised-startup-coaching">
             <h3>Generalised</h3>
             <p><a href="https://www.startupschool.org/" target="_blank">Startup School</a></p>
           </div>
@@ -72,20 +77,22 @@
 
 
          <!-- in the sources container show three cards, side by side, or one atop the other on smaller viewports -->
-         <div class="container__teambuilding">
+         <div class="container__teambuilding" id="team-building">
       
-            <div class="sources--professionals">
+            <div class="sources--professionals" id="professionals">
               <h3>Professionals</h3>
               <p><a href="https://linkedin.com" target="_blank">Linkedin</a></p>
+              <p><a href="https://angel.co/build-your-team" target="_blank">AngelList</a></p>
+
             </div>
 
-            <div class="sources--software">
+            <div class="sources--software" id="software-professional">
                 <h3>Software</h3>
                 <p><a href="https://github.com/search?q=followers%3A%3E%3D1000&type=Users" target="_blank">GitHub Users</a></p>
                 <p><a href="https://stackoverflow.com/users" target="_blank">Stack Overflow Users</a></p>
             </div>
 
-            <div class="sources--software">
+            <div class="sources--hardware" id="hardware-professional">
                 <h3>Hardware</h3>
                 <p><a href="https://electronics.stackexchange.com/users" target="_blank">Electronics</a></p>
                 <p><a href="https://www.tindie.com" target="_blank">Makers[Tindie]</a></p>
@@ -93,12 +100,12 @@
 
             </div>
 
-            <div class="sources--software">
+            <div class="sources--design" id="design-professional">
                 <h3>Design</h3>
                 <p><a href="https://dribbble.com/hiring" target="_blank">Dribbble</a></p>
             </div>
 
-            <div class="sources--freelancers">
+            <div class="sources--freelancers" id="freelancer">
                 <h3>Freelancers</h3>
                 <p><a href="https://www.toptal.com/" target="_blank">Topal</a></p>
                 <p><a href="https://www.upwork.com/" target="_blank">Upwork</a></p>
@@ -113,8 +120,8 @@
           </svg>
           
         <!-- in the sources container show three cards, side by side, or one atop the other on smaller viewports -->
-         <div class="container__cloud">      
-            <div class="sources--PaaS">
+         <div class="container__cloud" id="cloud">     
+            <div class="sources--PaaS" id="PaaS">
               <h3>PaaS</h3>
               <p><a href="https://heroku.com" target="_blank">Heroku</a></p>
               <p><a href="https://aws.amazon.com/lambda/" target="_blank">AWS Lambda</a></p>
@@ -122,7 +129,7 @@
               <p><a href="https://cloud.google.com/functions/" target="_blank">Cloud Functions</a></p>
             </div>
 
-            <div class="sources--IaaS">
+            <div class="sources--IaaS" id="IaaS">
               <h3>IaaS</h3>
               <p><a href="https://aws.amazon.com/ec2/" target="_blank">AWS EC2</a></p>
               <p><a href="https://azure.microsoft.com/en-us/services/virtual-machines/" target="_blank">Azure VM</a></p>
@@ -139,22 +146,22 @@
         </svg>
 
               <!-- in the sources container show three cards, side by side, or one atop the other on smaller viewports -->
-                <div class="container__container">      
+                <div class="container__container" id="container">      
       
-                  <div class="sources--containerization">
+                  <div class="sources--containerization" id="containerization">
                     <h3>Containerization</h3>
                     <p><a href="https://www.docker.com/" target="_blank">Docker</a></p>
                     <p><a href="https://coreos.com/rkt/" target="_blank">rkt</a></p>
                   </div>
       
-                  <div class="sources--container-orchestration">
+                  <div class="sources--container-orchestration" id="orchestration">
                     <h3>Container Orchestration</h3>
                     <p><a href="https://kubernetes.io/" target="_blank">Kubernetes</a></p>
                     <p><a href="https://www.openshift.com/" target="_blank">OpenShift</a></p>
                     <p><a href="https://www.cloudfoundry.org/" target="_blank">Cloud Foundry</a></p>
                   </div>
 
-                  <div class="sources--container-networking">
+                  <div class="sources--container-networking" id="networking">
                     <h3>Network Interface</h3>
                     <p><a href="https://github.com/coreos/flannel" target="_blank">flannel</a></p>
                     <p><a href="https://www.projectcalico.org/" target="_blank">Calico</a></p>
@@ -169,9 +176,9 @@
               </svg>
 
                             <!-- in the sources container show three cards, side by side, or one atop the other on smaller viewports -->
-              <div class="container__website">      
+              <div class="container__website" id="website">   
       
-                              <div class="sources--static-builders">
+                              <div class="sources--static-builders" id="static-builders">
                                 <h3>Static Builders</h3>
                                 <p><a href="https://jekyllrb.com/" target="_blank">Jekyll</a></p>
                                 <p><a href="https://hexo.io/" target="_blank">Hexo</a></p>
@@ -179,21 +186,21 @@
                                 <p><a href="https://gohugo.io/" target="_blank">HUGO</a></p>
                               </div>
 
-                              <div class="sources--website-builders">
+                              <div class="sources--website-builders" id="website-builders">
                                 <h3>Website Builders</h3>
                                 <p><a href="https://www.weebly.com/" target="_blank">Weebly</a></p>
                                 <p><a href="https://www.wix.com/" target="_blank">WiX</a></p>
                                 <p><a href="https://www.squarespace.com/" target="_blank">Squarespace</a></p>
                               </div>
 
-                              <div class="sources--cms">
+                              <div class="sources--CMS" id="CMS">
                                 <h3>CMS</h3>
                                 <p><a href="https://wordpress.org/" target="_blank">Wordpress</a></p>
                                 <p><a href="https://www.joomla.org/" target="_blank">Joomla</a></p>
                                 <p><a href="https://www.drupal.org/" target="_blank">Drupal</a></p>
                               </div>
 
-                              <div class="sources--e-commerce">
+                              <div class="sources--e-commerce" id="e-commerce">
                                 <h3>E-commerce</h3>
                                 <p><a href="https://www.shopify.com/" target="_blank">Shopify</a></p>
                                 <p><a href="https://woocommerce.com/" target="_blank">WooCommerce</a></p>
@@ -202,7 +209,7 @@
                                 <p><a href="https://squareup.com/us/en/online-store" target="_blank">Square Online Store</a></p>
                               </div>
 
-                              <div class="sources--hosting">
+                              <div class="sources--hosting" id="hosting">
                                 <h3>Hosting</h3>
                                 <p><a href="https://firebase.google.com/products/hosting" target="_blank">Firebase</a></p>
                                 <p><a href="https://www.netlify.com/" target="_blank">netlify</a></p>
@@ -210,7 +217,7 @@
                                 <p><a href="https://www.interserver.net/" target="_blank">interServer</a></p>
                               </div>
 
-                              <div class="sources--domain-registrar">
+                              <div class="sources--domain-registrar" id="domain-register">
                                 <h3>Domain Registrar</h3>
                                 <p><a href="https://www.namecheap.com/" target="_blank">Namecheap</a></p>
                                 <p><a href="https://domains.google/" target="_blank">Google Domains</a></p>
@@ -226,9 +233,9 @@
                           </svg> 
 
                    <!-- in the sources container show three cards, side by side, or one atop the other on smaller viewports -->
-        <div class="container__design">      
+        <div class="container__design" id="design">      
       
-                    <div class="sources--graphic-design">
+                    <div class="sources--graphic-design" id="graphics-design">
                       <h3>Graphic Design</h3>
                       <p><a href="https://www.canva.com/" target="_blank">Canva</a></p>
                       <p><a href="https://getstencil.com/" target="_blank">Stencil</a></p>
@@ -236,7 +243,7 @@
                       <p><a href="https://www.gimp.org/" target="_blank">GIMP</a></p>
                     </div>
 
-                    <div class="sources--vector-graphics-editor">
+                    <div class="sources--vector-graphics-editor" id="vector-graphics">
                     <h3>Vector Graphics Editors</h3>
                     <p><a href="https://krita.org" target="_blank">KRITA</a></p>
                     <p><a href="https://inkscape.org/" target="_blank">INKSCAPE</a></p>
@@ -244,7 +251,7 @@
                     <p><a href="https://www.sketch.com/" target="_blank">Sketch</a></p>
                     </div>
 
-                    <div class="sources--js-frontend">
+                    <div class="sources--js-frontend" id="js-frontend">
                       <h3>JS Frontend</h3>
                       <p><a href="https://reactjs.org/" target="_blank">React</a></p>
                       <p><a href="https://angular.io/" target="_blank">Angular</a></p>
@@ -253,7 +260,7 @@
                       <p><a href="https://marionettejs.com/" target="_blank">Marionette</a></p>
                     </div>
 
-                    <div class="sources--design-language">
+                    <div class="sources--design-language" id="design-language">
                       <h3>Design Language</h3>
                       <p><a href="https://www.microsoft.com/design/fluent/" target="_blank">MS Fluent Design System</a></p>
                       <p><a href="https://developer.apple.com/design/human-interface-guidelines/" target="_blank">Apple Human Interface</a></p>
@@ -261,7 +268,7 @@
                       <p><a href="https://www.canva.com/learn/minimalist-design-beautiful-examples-and-practical-tips/" target="_blank">Minimalism</a></p>
                     </div>
 
-                    <div class="sources--color-palette">
+                    <div class="sources--color-palette" id="color-palette">
                       <h3>Color Palette</h3>
                       <p><a href="https://coolors.co/" target="_blank">coolors</a></p>
                       <p><a href="https://colorhunt.co/" target="_blank">Color Hunt</a></p>
@@ -269,7 +276,7 @@
                       <p><a href="https://colordrop.io/" target="_blank">ColorDrop</a></p>
                     </div>
 
-                    <div class="sources--stock-art">
+                    <div class="sources--stock-art" id="stock-art">
                       <h3>Stock Art</h3>
                       <p><a href="https://www.pexels.com/" target="_blank">Pexels</a></p>
                       <p><a href="https://stocksnap.io/" target="_blank">StockSnap</a></p>
@@ -287,9 +294,9 @@
             </svg> 
 
                           <!-- in the sources container show three cards, side by side, or one atop the other on smaller viewports -->
-                          <div class="container__payments">      
+                          <div class="container__payments" id="payments">      
       
-                            <div class="sources--gateways">
+                            <div class="sources--gateways" id="payment-gateways">
                               <h3>Gateways</h3>
                               <p><a href="https://paypal.com/" target="_blank">PayPal</a></p>
                               <p><a href="https://stripe.com/" target="_blank">Stripe</a></p>
@@ -300,7 +307,7 @@
                               <p><a href="https://en.wikipedia.org/wiki/List_of_online_payment_service_providers" target="_blank">List of payment gateways</a></p>
                             </div>
 
-                            <div class="sources--gateways">
+                            <div class="sources--accounting-invoicing-billing" id="accounting">
                               <h3>Billing, Invoicing, Accounting</h3>
                               <p><a href="https://www.zoho.com/books/" target="_blank">Zoho books</a></p>
                               <p><a href="https://www.freshbooks.com/" target="_blank">FreshBooks</a></p>
@@ -317,34 +324,35 @@
                         </svg> 
 
         <!-- in the sources container show three cards, side by side, or one atop the other on smaller viewports -->
-         <div class="container__promotion">
+         <div class="container__promotion" id="promotion">
       
-            <div class="sources--media">
+            <div class="sources--media" id="media">
               <h3>Media</h3>
               <p><a href="https://techcrunch.com" target="_blank">TechCrunch</a></p>
-            </div>
+              <p><a href="https://venturebeat.com" target="_blank">VentureBeat</a></p>
+            </div> 
 
-            <div class="sources--shiny">
+            <div class="sources--shiny" id="shiny">
                 <h3>Shiny</h3>
                 <p><a href="https://producthunt.com" target="_blank">Product Hunt</a></p>
               </div>
 
-            <div class="sources--open-source">
+            <div class="sources--open-source" id="open-source">
                 <h3>Open-Source</h3>
                 <p><a href="https://news.ycombinator.com/showhn.html" target="_blank">Show HN</a></p>
             </div>
 
-            <div class="sources--search">
+            <div class="sources--search" id="search">
                 <h3>Search</h3>
                 <p><a href="https://ads.google.com/" target="_blank">Google Ads</a></p>
             </div>
 
-            <div class="sources--socialmedia">
+            <div class="sources--social-media" id="social-media">
                 <h3>Social Media</h3>
                 <p><a href="https://buffer.com/" target="_blank">Buffer</a></p>
             </div>
 
-            <div class="sources--influencers">
+            <div class="sources--influencers" id="influencers">
                 <h3>Influencers</h3>
                 <p><a href="https://instagram.com/" target="_blank">Instagaram</a></p>
             </div>
