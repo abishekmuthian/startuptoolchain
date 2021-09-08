@@ -1,4 +1,11 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,300italic,400italic&display=swap");
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/roboto-v20-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-300.eot"); /* IE9 Compat Modes */
+  src: local(''), url("../fonts/roboto-v20-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-300.eot?#iefix") format('embedded-opentype'), url("../fonts/roboto-v20-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-300.woff2") format('woff2'), url("../fonts/roboto-v20-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-300.woff") format('woff'), url("../fonts/roboto-v20-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-300.ttf") format('truetype'), url("../fonts/roboto-v20-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-300.svg#Roboto") format('svg');
+/* Legacy iOS */
+}
 h1 {
   margin-bottom: 2.5em;
 }
@@ -22,13 +29,27 @@ a:hover {
 .container__design:before,
 .container__payments:before,
 .container__management:before,
+.container__email:before,
+.container__remote-work:before,
 .container__incorporation:before,
-.container__investment:before {
+.container__investment:before,
+.container__finance:before,
+.container__marketing:before,
+.container__legal:before,
+.container__analytics:before,
+.container__operations:before,
+.container__datascience:before,
+.container__manufacturing:before,
+.container__software-development:before,
+.container__equity:before,
+.container__3D_Printing:before,
+.container__Monitoring:before,
+.container__pricing:before {
   position: absolute;
   right: 0;
   bottom: 100%;
-  color: #ffe0b2;
-  background: #ff9800;
+  color: #e7e6e1;
+  background: #f57c00;
   text-transform: uppercase;
   font-size: 0.9rem;
   padding: 0.25rem 0.75rem;
@@ -45,13 +66,27 @@ a:hover {
 .container__design div,
 .container__payments div,
 .container__management div,
+.container__email div,
+.container__remote-work div,
 .container__incorporation div,
-.container__investment div {
+.container__investment div,
+.container__finance div,
+.container__marketing div,
+.container__legal div,
+.container__analytics div,
+.container__operations div,
+.container__datascience div,
+.container__manufacturing div,
+.container__software-development div,
+.container__equity div,
+.container__3D_Printing div,
+.container__Monitoring div,
+.container__pricing div {
   line-height: 2;
-  background: #ffe0b2;
+  background: #e7e6e1;
   padding: 1.2rem 1rem;
   border-radius: 4px;
-  box-shadow: 0 2px 10px #ffcf87;
+  box-shadow: 0 2px 10px #d3d1c8;
 }
 * {
   box-sizing: border-box;
@@ -63,12 +98,12 @@ body {
   width: 100%;
   font-family: 'Roboto';
   color: #212121;
-  background: #f57c00;
+  background: #ff9800;
 }
 .container {
   margin: 5vh 2.5vw;
   padding: 15vh 0;
-  background: #ffe0b2;
+  background: #e7e6e1;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -79,7 +114,7 @@ body {
   height: 5rem;
 }
 .container svg line {
-  stroke: #f57c00;
+  stroke: #ff9800;
   stroke-width: 3px;
   stroke-linecap: round;
   stroke-dasharray: 2px 20px;
@@ -97,7 +132,7 @@ p {
   display: flex;
   border-radius: 8px;
   padding: 1.5rem;
-  background: #ffdca7;
+  background: #e2e1db;
   position: relative;
 }
 .container__validation:before {
@@ -111,7 +146,7 @@ p {
   display: flex;
   border-radius: 8px;
   padding: 1.5rem;
-  background: #ffdca7;
+  background: #e2e1db;
   position: relative;
 }
 .container__startup-coaching:before {
@@ -125,7 +160,7 @@ p {
   display: flex;
   border-radius: 8px;
   padding: 1.5rem;
-  background: #ffdca7;
+  background: #e2e1db;
   position: relative;
 }
 .container__teambuilding:before {
@@ -139,7 +174,7 @@ p {
   display: flex;
   border-radius: 8px;
   padding: 1.5rem;
-  background: #ffdca7;
+  background: #e2e1db;
   position: relative;
 }
 .container__promotion:before {
@@ -153,7 +188,7 @@ p {
   display: flex;
   border-radius: 8px;
   padding: 1.5rem;
-  background: #ffdca7;
+  background: #e2e1db;
   position: relative;
 }
 .container__cloud:before {
@@ -167,7 +202,7 @@ p {
   display: flex;
   border-radius: 8px;
   padding: 1.5rem;
-  background: #ffdca7;
+  background: #e2e1db;
   position: relative;
 }
 .container__container:before {
@@ -181,7 +216,7 @@ p {
   display: flex;
   border-radius: 8px;
   padding: 1.5rem;
-  background: #ffdca7;
+  background: #e2e1db;
   position: relative;
 }
 .container__website:before {
@@ -195,7 +230,7 @@ p {
   display: flex;
   border-radius: 8px;
   padding: 1.5rem;
-  background: #ffdca7;
+  background: #e2e1db;
   position: relative;
 }
 .container__design:before {
@@ -209,7 +244,7 @@ p {
   display: flex;
   border-radius: 8px;
   padding: 1.5rem;
-  background: #ffdca7;
+  background: #e2e1db;
   position: relative;
 }
 .container__payments:before {
@@ -223,7 +258,7 @@ p {
   display: flex;
   border-radius: 8px;
   padding: 1.5rem;
-  background: #ffdca7;
+  background: #e2e1db;
   position: relative;
 }
 .container__management:before {
@@ -233,11 +268,39 @@ p {
   text-align: left;
   margin: 0 1rem;
 }
+.container__email {
+  display: flex;
+  border-radius: 8px;
+  padding: 1.5rem;
+  background: #e2e1db;
+  position: relative;
+}
+.container__email:before {
+  content: 'email';
+}
+.container__email div {
+  text-align: left;
+  margin: 0 1rem;
+}
+.container__remote-work {
+  display: flex;
+  border-radius: 8px;
+  padding: 1.5rem;
+  background: #e2e1db;
+  position: relative;
+}
+.container__remote-work:before {
+  content: 'Remote Work';
+}
+.container__remote-work div {
+  text-align: left;
+  margin: 0 1rem;
+}
 .container__incorporation {
   display: flex;
   border-radius: 8px;
   padding: 1.5rem;
-  background: #ffdca7;
+  background: #e2e1db;
   position: relative;
 }
 .container__incorporation:before {
@@ -251,13 +314,181 @@ p {
   display: flex;
   border-radius: 8px;
   padding: 1.5rem;
-  background: #ffdca7;
+  background: #e2e1db;
   position: relative;
 }
 .container__investment:before {
   content: 'Investment';
 }
 .container__investment div {
+  text-align: left;
+  margin: 0 1rem;
+}
+.container__finance {
+  display: flex;
+  border-radius: 8px;
+  padding: 1.5rem;
+  background: #e2e1db;
+  position: relative;
+}
+.container__finance:before {
+  content: 'Finance';
+}
+.container__finance div {
+  text-align: left;
+  margin: 0 1rem;
+}
+.container__marketing {
+  display: flex;
+  border-radius: 8px;
+  padding: 1.5rem;
+  background: #e2e1db;
+  position: relative;
+}
+.container__marketing:before {
+  content: 'Marketing';
+}
+.container__marketing div {
+  text-align: left;
+  margin: 0 1rem;
+}
+.container__legal {
+  display: flex;
+  border-radius: 8px;
+  padding: 1.5rem;
+  background: #e2e1db;
+  position: relative;
+}
+.container__legal:before {
+  content: 'Legal';
+}
+.container__legal div {
+  text-align: left;
+  margin: 0 1rem;
+}
+.container__analytics {
+  display: flex;
+  border-radius: 8px;
+  padding: 1.5rem;
+  background: #e2e1db;
+  position: relative;
+}
+.container__analytics:before {
+  content: 'Analytics';
+}
+.container__analytics div {
+  text-align: left;
+  margin: 0 1rem;
+}
+.container__operations {
+  display: flex;
+  border-radius: 8px;
+  padding: 1.5rem;
+  background: #e2e1db;
+  position: relative;
+}
+.container__operations:before {
+  content: 'Operations';
+}
+.container__operations div {
+  text-align: left;
+  margin: 0 1rem;
+}
+.container__datascience {
+  display: flex;
+  border-radius: 8px;
+  padding: 1.5rem;
+  background: #e2e1db;
+  position: relative;
+}
+.container__datascience:before {
+  content: 'Data Science';
+}
+.container__datascience div {
+  text-align: left;
+  margin: 0 1rem;
+}
+.container__manufacturing {
+  display: flex;
+  border-radius: 8px;
+  padding: 1.5rem;
+  background: #e2e1db;
+  position: relative;
+}
+.container__manufacturing:before {
+  content: 'Manufacturing';
+}
+.container__manufacturing div {
+  text-align: left;
+  margin: 0 1rem;
+}
+.container__software-development {
+  display: flex;
+  border-radius: 8px;
+  padding: 1.5rem;
+  background: #e2e1db;
+  position: relative;
+}
+.container__software-development:before {
+  content: 'Software Development';
+}
+.container__software-development div {
+  text-align: left;
+  margin: 0 1rem;
+}
+.container__equity {
+  display: flex;
+  border-radius: 8px;
+  padding: 1.5rem;
+  background: #e2e1db;
+  position: relative;
+}
+.container__equity:before {
+  content: 'Equity';
+}
+.container__equity div {
+  text-align: left;
+  margin: 0 1rem;
+}
+.container__3D_Printing {
+  display: flex;
+  border-radius: 8px;
+  padding: 1.5rem;
+  background: #e2e1db;
+  position: relative;
+}
+.container__3D_Printing:before {
+  content: '3D Printing';
+}
+.container__3D_Printing div {
+  text-align: left;
+  margin: 0 1rem;
+}
+.container__Monitoring {
+  display: flex;
+  border-radius: 8px;
+  padding: 1.5rem;
+  background: #e2e1db;
+  position: relative;
+}
+.container__Monitoring:before {
+  content: 'Monitoring';
+}
+.container__Monitoring div {
+  text-align: left;
+  margin: 0 1rem;
+}
+.container__pricing {
+  display: flex;
+  border-radius: 8px;
+  padding: 1.5rem;
+  background: #e2e1db;
+  position: relative;
+}
+.container__pricing:before {
+  content: 'Pricing';
+}
+.container__pricing div {
   text-align: left;
   margin: 0 1rem;
 }
@@ -270,7 +501,7 @@ footer a {
 footer a:hover {
   color: #ffe0b2;
 }
-@media (max-width: 700px) {
+@media (max-width: 1160px) {
   .container__validation,
   .container__startup-coaching,
   .container__teambuilding,
@@ -282,7 +513,21 @@ footer a:hover {
   .container__payments,
   .container__management,
   .container__investment,
-  .container__incorporation {
+  .container__incorporation,
+  .container__email,
+  .container__remote-work,
+  .container__finance,
+  .container__marketing,
+  .container__legal,
+  .container__analytics,
+  .container__operations,
+  .container__datascience,
+  .container__manufacturing,
+  .container__software-development,
+  .container__equity,
+  .container__3D_Printing,
+  .container__Monitoring,
+  .container__pricing {
     flex-direction: column;
   }
   .container__validation div,
@@ -296,8 +541,262 @@ footer a:hover {
   .container__payments div,
   .container__management div,
   .container__investment div,
-  .container__incorporation div {
+  .container__incorporation div,
+  .container__email div,
+  .container__remote-work div,
+  .container__finance div,
+  .container__marketing div,
+  .container__legal div,
+  .container__analytics div,
+  .container__operations div,
+  .container__datascience div,
+  .container__manufacturing div,
+  .container__software-development div,
+  .container__equity div,
+  .container__3D_Printing div,
+  .container__Monitoring div,
+  .container__pricing div {
     margin: 1rem 0;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #f2a365;
+  }
+  h3 {
+    color: #fff;
+  }
+  h1,
+  h2,
+  h4,
+  h5,
+  p,
+  li,
+  pre {
+    color: #ececec;
+  }
+  .tooltip,
+  .container__validation:before,
+  .container__startup-coaching:before,
+  .container__teambuilding:before,
+  .container__promotion:before,
+  .container__cloud:before,
+  .container__container:before,
+  .container__website:before,
+  .container__design:before,
+  .container__payments:before,
+  .container__management:before,
+  .container__investment:before,
+  .container__incorporation:before,
+  .container__email:before,
+  .container__remote-work:before,
+  .container__finance:before,
+  .container__marketing:before,
+  .container__legal:before,
+  .container__analytics:before,
+  .container__operations:before,
+  .container__datascience:before,
+  .container__manufacturing:before,
+  .container__software-development:before,
+  .container__equity:before,
+  .container__3D_Printing:before,
+  .container__Monitoring:before,
+  .container__pricing:before {
+    color: #212121;
+    background: #f2a365;
+  }
+  .card,
+  .container__validation div,
+  .container__startup-coaching div,
+  .container__teambuilding div,
+  .container__promotion div,
+  .container__cloud div,
+  .container__container div,
+  .container__website div,
+  .container__design div,
+  .container__payments div,
+  .container__management div,
+  .container__investment div,
+  .container__incorporation div,
+  .container__email div,
+  .container__remote-work div,
+  .container__finance div,
+  .container__marketing div,
+  .container__legal div,
+  .container__analytics div,
+  .container__operations div,
+  .container__datascience div,
+  .container__manufacturing div,
+  .container__software-development div,
+  .container__equity div,
+  .container__3D_Printing div,
+  .container__Monitoring div,
+  .container__pricing div {
+    background: #222831;
+  }
+  .container {
+    background: #222831;
+  }
+  .style-select .vs__search::placeholder,
+  .style-select .vs__dropdown-toggle,
+  .style-select .vs__dropdown-menu {
+    background: #222831;
+    border: 1px solid #bbb;
+    color: #ececec;
+  }
+  .style-select input {
+    color: #ececec;
+  }
+  .style-select .vs__dropdown-option {
+    color: #ececec;
+  }
+  .style-select .vs__dropdown-option--highlight {
+    background: #f2a365;
+  }
+  .style-select .vs__clear,
+  .style-select .vs__open-indicator {
+    fill: #394066;
+  }
+  .style-select .vs__selected {
+    color: #ececec;
+  }
+  .container__validation,
+  .container__startup-coaching,
+  .container__teambuilding,
+  .container__promotion,
+  .container__cloud,
+  .container__container,
+  .container__website,
+  .container__design,
+  .container__payments,
+  .container__management,
+  .container__investment,
+  .container__incorporation,
+  .container__email,
+  .container__remote-work,
+  .container__finance,
+  .container__marketing,
+  .container__legal,
+  .container__analytics,
+  .container__operations,
+  .container__datascience,
+  .container__manufacturing,
+  .container__software-development,
+  .container__equity,
+  .container__3D_Printing,
+  .container__Monitoring,
+  .container__pricing {
+    background: #33313b;
+  }
+  footer p {
+    color: #212121;
+  }
+}
+@media (prefers-color-scheme: light) {
+  body {
+    background: #ff9800;
+  }
+  h3 {
+    color: #191919;
+  }
+  h1,
+  h2,
+  h4,
+  h5,
+  p,
+  li,
+  pre {
+    color: #212121;
+  }
+  .tooltip,
+  .container__validation:before,
+  .container__startup-coaching:before,
+  .container__teambuilding:before,
+  .container__promotion:before,
+  .container__cloud:before,
+  .container__container:before,
+  .container__website:before,
+  .container__design:before,
+  .container__payments:before,
+  .container__management:before,
+  .container__investment:before,
+  .container__incorporation:before,
+  .container__email:before,
+  .container__remote-work:before,
+  .container__finance:before,
+  .container__marketing:before,
+  .container__legal:before,
+  .container__analytics:before,
+  .container__operations:before,
+  .container__datascience:before,
+  .container__manufacturing:before,
+  .container__software-development:before,
+  .container__equity:before,
+  .container__3D_Printing:before,
+  .container__Monitoring:before,
+  .container__pricing:before {
+    color: #e7e6e1;
+    background: #f57c00;
+  }
+  .card,
+  .container__validation div,
+  .container__startup-coaching div,
+  .container__teambuilding div,
+  .container__promotion div,
+  .container__cloud div,
+  .container__container div,
+  .container__website div,
+  .container__design div,
+  .container__payments div,
+  .container__management div,
+  .container__investment div,
+  .container__incorporation div,
+  .container__email div,
+  .container__remote-work div,
+  .container__finance div,
+  .container__marketing div,
+  .container__legal div,
+  .container__analytics div,
+  .container__operations div,
+  .container__datascience div,
+  .container__manufacturing div,
+  .container__software-development div,
+  .container__equity div,
+  .container__3D_Printing div,
+  .container__Monitoring div,
+  .container__pricing div {
+    background: #e7e6e1;
+  }
+  .container {
+    background: #e7e6e1;
+  }
+  .container__validation,
+  .container__startup-coaching,
+  .container__teambuilding,
+  .container__promotion,
+  .container__cloud,
+  .container__container,
+  .container__website,
+  .container__design,
+  .container__payments,
+  .container__management,
+  .container__investment,
+  .container__incorporation,
+  .container__email,
+  .container__remote-work,
+  .container__finance,
+  .container__marketing,
+  .container__legal,
+  .container__analytics,
+  .container__operations,
+  .container__datascience,
+  .container__manufacturing,
+  .container__software-development,
+  .container__equity,
+  .container__3D_Printing,
+  .container__Monitoring,
+  .container__pricing {
+    background: #e2e1db;
   }
 }
 @-moz-keyframes animateline {

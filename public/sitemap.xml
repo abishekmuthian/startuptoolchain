@@ -14,9 +14,18 @@
 
     <url>
 
+        <loc>https://www.startuptoolchain.com/calculators/ppp.html</loc>
+
+        <lastmod>2021-08-20</lastmod>
+
+        <changefreq>monthly</changefreq>
+    </url>
+
+    <url>
+
         <loc>https://www.startuptoolchain.com/about.html</loc>
 
-        <lastmod>2020-01-01</lastmod>
+        <lastmod>2021-08-01</lastmod>
 
         <changefreq>monthly</changefreq>
     </url>

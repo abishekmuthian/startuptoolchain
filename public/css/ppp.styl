@@ -1,0 +1,343 @@
+// @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,300italic,400italic&display=swap');
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/roboto-v20-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-300.eot'); /* IE9 Compat Modes */
+    src: local(''), url('../fonts/roboto-v20-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-300.eot?#iefix') format('embedded-opentype'), url('../fonts/roboto-v20-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-300.woff2') format('woff2'), url('../fonts/roboto-v20-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-300.woff') format('woff'), url('../fonts/roboto-v20-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-300.ttf') format('truetype'), url('../fonts/roboto-v20-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-300.svg#Roboto') format('svg');
+    /* Legacy iOS */
+}
+
+font-text = 'Roboto';
+color-text = #212121;
+color-card = #E7E6E1;
+color-card-dark-mode = #222831;
+color-card-inner-container-dark-mode = #33313b;
+color-card-outer-container-dark-mode = #222831;
+color-text-dark-mode = #ececec;
+color-step = #F57C00;
+color-bg = #FF9800;
+color-bg-dark-mode = #f2a365;
+
+// Title
+h1 {
+    margin-bottom: 2.5em;
+}
+
+h2 {
+    margin: 2em;
+}
+
+// Anchor
+a {
+    color: color-step;
+}
+
+a:hover {
+    color: color-bg;
+}
+
+// create a class shared by all pseudo elements depicting a step of the flow (each altering only the content property)
+.tooltip {
+    // position the tooltip in the top right of the container
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    // style the tooltip with the chosen color values
+    color: color-card;
+    background: color-step;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 2.5px;
+}
+
+// create a class shared by all cards
+.card {
+    line-height: 2;
+    background: color-card;
+    padding: 1.2rem 1rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px darken(color-card, 10%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    font-family: font-text;
+    color: color-text;
+    background: color-bg;
+}
+
+// separate the main container from the surrounding page
+.container {
+    margin: 5vh 2.5vw;
+    padding: 15vh 0;
+    background: color-card;
+    border-radius: 5px;
+    // display the content in a single column layout
+    display: flex;
+    flex-direction: column;
+    // center the content
+    align-items: center;
+    text-align: center;
+
+    // for the SVG separating the containers, set a reasonable height
+    svg {
+        height: 5rem;
+
+        line {
+            stroke: color-bg;
+            stroke-width: 3px;
+            stroke-linecap: round;
+            // include a stroke-dasharray depicting small dots separated by considerable space
+            stroke-dasharray: 2px 20px;
+            // animate the stroke-dashoffset property to move the dotted line downward
+            animation: animateline 5s linear both infinite;
+        }
+    }
+}
+
+// style all headings and paragraphs with the same values
+h3 {
+    font-size: 1.1rem;
+    color: darken(color-text, 25%);
+}
+
+p {
+    font-size: 0.95rem;
+    font-weight: 300;
+}
+
+.container__ppp {
+    // display the contents of the first container in a single row
+    display: flex;
+    border-radius: 8px;
+    padding: 1.5rem;
+    background: darken(color-card, 2.5%);
+    // position relative for the pseudo element
+    position: relative;
+
+    &:before {
+        @extend .tooltip;
+        content: 'PPP';
+    }
+
+    h3{
+        margin-top: 25px;
+    }
+
+    #app {
+        @extend .card;
+        width: 100%;
+        height: auto;
+        margin: 1em auto;
+    }
+
+    .style-input {
+        display: inline-block;
+        background: color-card-outer-container-dark-mode;
+        color: color-text-dark-mode;
+        border: 1px solid #BBBBBB;
+        border-radius: 4px;
+        line-height: 2;
+        height: 35px;
+        width: 260px;
+        padding-left: 1em;
+    }
+
+    .style-span {
+        margin-top: 25px;
+        display: inline-block;
+        color: color-text-dark-mode;
+        white-space: normal;
+        max-width: 200px;
+        line-height: 1.5;
+        
+    }
+
+    .style-select .vs__dropdown-toggle {
+        max-height: 35px;
+    }
+
+    .style-select .vs__clear, .style-select .vs__open-indicator {
+        max-height: 100%;
+    }
+}
+
+footer {
+    padding: 0 0 1.5em 1.5em;
+}
+
+footer a {
+    color: #212121;
+}
+
+footer a:hover {
+    color: #FFE0B2;
+}
+
+// on smaller viewports lay the three cards on top of one another
+@media (max-width: 1160px) {
+    .container__ppp {
+        flex-direction: column;
+
+        .style-span {
+            display: inline-block;
+            white-space: normal;
+            max-width: 200px;
+            line-height: 1.5;
+        }
+    }
+}
+
+// Dark Mode
+@media (prefers-color-scheme: dark) {
+    body {
+        background: color-bg-dark-mode;
+    }
+
+    h3 {
+        color: lighten(color-text-dark-mode, 100%);
+    }
+
+    h1, h2, h4, h5, p, li, pre {
+        color: color-text-dark-mode;
+    }
+
+    .tooltip {
+        color: color-text;
+        background: color-bg-dark-mode;
+    }
+
+    .card {
+        background: color-card-dark-mode;
+    }
+
+    .container {
+        background: color-card-outer-container-dark-mode;
+    }
+
+    .style-select .vs__search::placeholder, .style-select .vs__dropdown-toggle, .style-select .vs__dropdown-menu {
+        background: color-card-dark-mode;
+        border: 1px solid #BBBBBB;
+        color: color-text-dark-mode;
+    }
+
+    .style-select input {
+        color: color-text-dark-mode;
+    }
+
+    .style-select .vs__dropdown-option {
+        color: color-text-dark-mode;
+    }
+
+    .style-select .vs__dropdown-option--highlight {
+        background: color-bg-dark-mode;
+    }
+
+    .style-select .vs__clear, .style-select .vs__open-indicator {
+        fill: #394066;
+    }
+
+    .style-select .vs__selected {
+        color: color-text-dark-mode;
+    }
+
+    .container__ppp {
+        background: color-card-inner-container-dark-mode;
+
+        &:before {
+            @extend .tooltip;
+        }
+
+        #app {
+            @extend .card;
+        }
+    }
+
+    footer p {
+        color: color-text;
+    }
+}
+
+// Light Mode
+@media (prefers-color-scheme: light) {
+    body {
+        background: color-bg;
+    }
+
+    h3 {
+        color: darken(color-text, 25%);
+    }
+
+    h1, h2, h4, h5, p, li, pre {
+        color: color-text;
+    }
+
+    .tooltip {
+        color: color-card;
+        background: color-step;
+    }
+
+    .card {
+        background: color-card;
+    }
+
+    .container {
+        background: color-card;
+    }
+
+
+
+    .container__ppp {
+        background: darken(color-card, 2.5%);
+
+        &:before {
+            @extend .tooltip;
+        }
+
+        #app {
+            @extend .card;
+        }
+
+        .style-select .vs__dropdown-menu{
+            background: #E7E6E1;
+        }
+        .style-select .vs__dropdown-option {
+            color: color-text;
+            background: #E7E6E1;
+        }
+    
+        .style-select .vs__dropdown-option--highlight {
+            background: color-bg;
+        }
+    
+        .style-input {
+            background: #E7E6E1;
+            color: color-text;
+        }
+
+        .style-span{
+            color: color-text;
+        }
+    }
+}
+
+// animate the SVG line to show the dotted line moving downward
+// 5rem being the height of the SVG
+@keyframes animateline {
+    from {
+        stroke-dashoffset: 0;
+    }
+
+    to {
+        stroke-dashoffset: -5rem;
+    }
+}

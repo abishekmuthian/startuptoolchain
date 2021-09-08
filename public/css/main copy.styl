@@ -1,18 +1,10 @@
-// @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,300italic,400italic&display=swap');
-@font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 300;
-    src: url('../fonts/roboto-v20-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-300.eot'); /* IE9 Compat Modes */
-    src: local(''), url('../fonts/roboto-v20-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-300.eot?#iefix') format('embedded-opentype'), url('../fonts/roboto-v20-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-300.woff2') format('woff2'), url('../fonts/roboto-v20-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-300.woff') format('woff'), url('../fonts/roboto-v20-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-300.ttf') format('truetype'), url('../fonts/roboto-v20-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-300.svg#Roboto') format('svg');
-    /* Legacy iOS */
-}
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,300italic,400italic&display=swap');
 
 font-text = 'Roboto';
 color-text = #212121;
 color-card = #E7E6E1;
 color-card-dark-mode = #222831;
-color-card-inner-container-dark-mode = #33313b;
+color-card-inner-container-dark-mode =  #33313b;
 color-card-outer-container-dark-mode = #222831;
 color-text-dark-mode = #ececec;
 color-step = #F57C00;
@@ -665,29 +657,6 @@ p {
     }
 }
 
-.container__pricing {
-    // display the contents of the first container in a single row
-    display: flex;
-    border-radius: 8px;
-    padding: 1.5rem;
-    background: darken(color-card, 2.5%);
-    // position relative for the pseudo element
-    position: relative;
-
-    &:before {
-        @extend .tooltip;
-        content: 'Pricing';
-    }
-
-    div {
-        // beside the properties shared by all cards, move the text to the left and separate the containers horizontally
-        @extend .card;
-        text-align: left;
-        margin: 0 1rem;
-    }
-}
-
-
 footer {
     padding: 0 0 1.5em 1.5em;
 }
@@ -700,128 +669,49 @@ footer a:hover {
     color: #FFE0B2;
 }
 
+
+
 // on smaller viewports lay the three cards on top of one another
 @media (max-width: 1160px) {
-    .container__validation, .container__startup-coaching, .container__teambuilding, .container__promotion, .container__cloud, .container__container, .container__website, .container__design, .container__payments, .container__management, .container__investment, .container__incorporation, .container__email, .container__remote-work, .container__finance, .container__marketing, .container__legal, .container__analytics, .container__operations, .container__datascience, .container__manufacturing, .container__software-development, .container__equity, .container__3D_Printing, .container__Monitoring, .container__pricing {
+    .container__validation, .container__startup-coaching, .container__teambuilding, .container__promotion, .container__cloud, .container__container, .container__website, .container__design, .container__payments, .container__management, .container__investment, .container__incorporation, .container__email, .container__remote-work, .container__finance, .container__marketing, .container__legal, .container__analytics, .container__operations, .container__datascience, .container__manufacturing, .container__software-development, .container__equity, .container__3D_Printing, .container__Monitoring {
         flex-direction: column;
 
         div {
             margin: 1rem 0;
         }
     }
-
-
 }
 
 // Dark Mode
 @media (prefers-color-scheme: dark) {
-    body {
+    body{
         background: color-bg-dark-mode;
     }
-
-    h3 {
-        color: lighten(color-text-dark-mode, 100%);
+    h1, h2, h3, h4, h5, p, li {
+    color: color-text-dark-mode;
     }
-
-    h1, h2, h4, h5, p, li, pre {
-        color: color-text-dark-mode;
-    }
-
     .tooltip {
         color: color-text;
         background: color-bg-dark-mode;
-    }
-
-    .card {
+    }  
+    .card{
         background: color-card-dark-mode;
     }
-
-    .container {
+   .container {
         background: color-card-outer-container-dark-mode;
     }
-
-    .style-select .vs__search::placeholder, .style-select .vs__dropdown-toggle, .style-select .vs__dropdown-menu {
-        background: color-card-dark-mode;
-        border: 1px solid #BBBBBB;
-        color: color-text-dark-mode;
-    }
-
-    .style-select input {
-        color: color-text-dark-mode;
-    }
-
-    .style-select .vs__dropdown-option {
-        color: color-text-dark-mode;
-    }
-
-    .style-select .vs__dropdown-option--highlight {
-        background: color-bg-dark-mode;
-    }
-
-    .style-select .vs__clear, .style-select .vs__open-indicator {
-        fill: #394066;
-    }
-
-    .style-select .vs__selected {
-        color: color-text-dark-mode;
-    }
-
-    .container__validation, .container__startup-coaching, .container__teambuilding, .container__promotion, .container__cloud, .container__container, .container__website, .container__design, .container__payments, .container__management, .container__investment, .container__incorporation, .container__email, .container__remote-work, .container__finance, .container__marketing, .container__legal, .container__analytics, .container__operations, .container__datascience, .container__manufacturing, .container__software-development, .container__equity, .container__3D_Printing, .container__Monitoring, .container__pricing {
+    .container__validation, .container__startup-coaching, .container__teambuilding, .container__promotion, .container__cloud, .container__container, .container__website, .container__design, .container__payments, .container__management, .container__investment, .container__incorporation, .container__email, .container__remote-work, .container__finance, .container__marketing, .container__legal, .container__analytics, .container__operations, .container__datascience, .container__manufacturing, .container__software-development, .container__equity, .container__3D_Printing, .container__Monitoring {
         background: color-card-inner-container-dark-mode;
-
         &:before {
-            @extend .tooltip;
-        }
-
-        div {
-            @extend .card;
-        }
+        @extend .tooltip;
     }
-
-    footer p {
-        color: color-text;
+        div{
+           @extend .card;
+        }
     }
 }
 
-// Light Mode
-@media (prefers-color-scheme: light) {
-    body {
-        background: color-bg;
-    }
-
-    h3 {
-        color: darken(color-text, 25%);
-    }
-
-    h1, h2, h4, h5, p, li, pre {
-        color: color-text;
-    }
-
-    .tooltip {
-        color: color-card;
-        background: color-step;
-    }
-
-    .card {
-        background: color-card;
-    }
-
-    .container {
-        background: color-card;
-    }
-
-    .container__validation, .container__startup-coaching, .container__teambuilding, .container__promotion, .container__cloud, .container__container, .container__website, .container__design, .container__payments, .container__management, .container__investment, .container__incorporation, .container__email, .container__remote-work, .container__finance, .container__marketing, .container__legal, .container__analytics, .container__operations, .container__datascience, .container__manufacturing, .container__software-development, .container__equity, .container__3D_Printing, .container__Monitoring, .container__pricing {
-        background: darken(color-card, 2.5%);
-
-        &:before {
-            @extend .tooltip;
-        }
-
-        div {
-            @extend .card;
-        }
-    }
-}
+   
 
 // animate the SVG line to show the dotted line moving downward
 // 5rem being the height of the SVG

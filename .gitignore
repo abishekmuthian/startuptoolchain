@@ -1,6 +1,5 @@
 .DS_Store
 .firebaserc
-.firebase
 firebase.json
 resources
 Startup-Toolchain-HTML.code-workspace

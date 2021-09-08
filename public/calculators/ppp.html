@@ -1,0 +1,565 @@
+<html>
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <meta content="utf-8" http-equiv="encoding" />
+
+    <title>StartupToolchain</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../manifest/site.webmanifest" />
+    <link rel="stylesheet" href="../css/ppp.css" />
+    <script async src="../js/support.js"></script>
+
+    <!-- development -->
+    <script src="https://unpkg.com/vue@latest"></script>
+    <!-- production -->
+    <!-- <script src="../js/vue.min.js"></script> -->
+
+    <script src="../js/vue-select.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/vue-select@latest/dist/vue-select.css"
+    />
+
+    <meta
+      name="description"
+      content="Best tool for your startup task, A toolchain for your entire startup."
+    />
+    <meta name="keywords" content="PPP, currency, calculator" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:author" content="Abishek Muthian" />
+    <meta property="og:url" content="https://startuptoolchain.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="StartupToolchain" />
+    <meta
+      property="og:description"
+      content="Best tool for your startup task, A toolchain for your entire startup."
+    />
+    <meta
+      property="og:image"
+      content="https://startuptoolchain.com/images/startuptoolchain.png"
+    />
+    <meta
+      property="og:image:alt"
+      content="Best tool for your startup task, A toolchain for your entire startup."
+    />
+    <meta name="twitter:site" content="@startuptoolchn" />
+    <meta name="twitter:title" content="StartupToolchain" />
+    <meta
+      name="twitter:description"
+      content="Best tool for your startup task, A toolchain for your entire startup."
+    />
+    <meta name="twitter:card" content="summary" />
+    <meta
+      name="twitter:image"
+      content="https://startuptoolchain.com/images/startuptoolchain.png"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="Best tool for your startup task, A toolchain for your entire startup."
+    />
+  </head>
+  <body>
+    <!-- in a wrapping section include different containers for each step of the flow: data sources, build, deploy -->
+    <section class="container">
+      <h1><a href="https://startuptoolchain.com">StartupToolchain</a></h1>
+      <h2>Purchasing Power Parity Calculator</h2>
+      <div class="container__ppp">
+        <div id="app">
+          <h3>Select the source country</h3>
+          <v-select
+            id="source-country"
+            class="style-select"
+            label="countryName"
+            :options="countries"
+            v-model="sourceSelected"
+          ></v-select>
+          <h3>Enter the price in source country</h3>
+          <input
+            class="style-input"
+            v-model="sourcePrice"
+            placeholder="Price in source country"
+          />
+          <h3>Select the destination country</h3>
+          <v-select
+            id="destination-country"
+            class="style-select"
+            label="countryName"
+            :options="countries"
+            v-model="destinationSelected"
+          ></v-select>
+          <template v-if="destinationPrice > 0">
+            <span class="style-span">
+              In {{ destinationSelected.countryName }} {{ destinationPrice }} {{
+              destinationSelected.countryCurrency }} will allow you to buy the
+              same things you'd buy with {{ sourcePrice }} {{
+              sourceSelected.countryCurrency }} in {{ sourceSelected.countryName
+              }}.
+            </span>
+          </template>
+        </div>
+      </div>
+      <p>
+        Source for Purchasing Power Parities:
+        <a
+          href="https://data.oecd.org/conversion/purchasing-power-parities-ppp.htm"
+          target="_blank"
+          >OCED</a
+        >
+      </p>
+      <div>
+        <br />
+        <h3>SUPPORT STARTUPTOOLCHAIN</h3>
+        <br />
+        <p>
+          <a href="https://startuptoolchain.com" target="_blank">StartupToolchain</a> is funded by people like you to list and build the
+          best tools for that startup task, A toolchain for the entire startup.
+        </p>
+        <br />
+        <form id="support">
+          <select id="currency" name="currency">
+            <option value="usd">Buy me a Burger 🇺🇸</option>
+            <option value="cad">Buy me a Poutine 🇨🇦</option>
+            <option value="eur">Buy me a Wurst 🇪🇺</option>
+            <option value="aud">Buy me a Lamington 🇦🇺</option>
+            <option value="inr">Buy me a Dosa 🇮🇳</option>
+          </select>
+          <select id="duration" name="duration">
+            <option value="onetime">One time</option>
+            <option value="monthly">Monthly</option>
+            </select>
+          <input type="submit" value="Support" onclick="processSupport(this.form); event.preventDefault; return false;">
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <p>
+        <a href="index.html">Home</a> | <a href="about.html">*About</a> |
+        <a
+          href="https://www.linkedin.com/company/startuptoolchain"
+          target="_blank"
+          >LinkedIn</a
+        >
+        |
+        <a href="https://twitter.com/startuptoolchn" target="_blank">Twitter</a>
+        |
+        <a href="https://www.facebook.com/startuptoolchain/" target="_blank"
+          >Facebook</a
+        >
+        | <a href="license.html">License</a> | © StartupToolchain 2021.
+      </p>
+    </footer>
+
+    <script type="text/javascript">
+      Vue.component("v-select", VueSelect.VueSelect);
+
+      new Vue({
+        el: "#app",
+        data: {
+          sourcePrice: [],
+          sourceSelected: {
+            countryCode: "US",
+            countryName: "United States of America",
+            countryPPP: 1,
+            countryCurrency: "USD",
+          },
+          destinationSelected: {
+            countryCode: "IN",
+            countryName: "India",
+            countryPPP: 21.989558,
+            countryCurrency: "INR",
+          },
+          countries: [
+            {
+              countryCode: "AR",
+              countryName: "Argentina",
+              countryPPP: 28.674,
+              countryCurrency: "ARS",
+            },
+            {
+              countryCode: "AU",
+              countryName: "Australia",
+              countryPPP: 1.472,
+              countryCurrency: "AUD",
+            },
+            {
+              countryCode: "AUT",
+              countryName: "Austria",
+              countryPPP: 0.764,
+              countryCurrency: "Euro",
+            },
+            {
+              countryCode: "BE",
+              countryName: "Belgium",
+              countryPPP: 0.751,
+              countryCurrency: "Euro",
+            },
+            {
+              countryCode: "BR",
+              countryName: "Brazil",
+              countryPPP: 2.362,
+              countryCurrency: "BRL",
+            },
+            {
+              countryCode: "BG",
+              countryName: "Bulgaria",
+              countryPPP: 0.703,
+              countryCurrency: "BGN",
+            },
+            {
+              countryCode: "CA",
+              countryName: "Canada",
+              countryPPP: 1.206,
+              countryCurrency: "CAD",
+            },
+            {
+              countryCode: "CL",
+              countryName: "Chile",
+              countryPPP: 418.432,
+              countryCurrency: "CLP",
+            },
+            {
+              countryCode: "CN",
+              countryName: "China",
+              countryPPP: 4.186,
+              countryCurrency: "CNY",
+            },
+            {
+              countryCode: "CO",
+              countryName: "Colombia",
+              countryPPP: 1352.786,
+              countryCurrency: "COP",
+            },
+            {
+              countryCode: "CR",
+              countryName: "Costa Rica",
+              countryPPP: 335.86,
+              countryCurrency: "CRC",
+            },
+            {
+              countryCode: "HR",
+              countryName: "Croatia",
+              countryPPP: 3.209,
+              countryCurrency: "HRK",
+            },
+            {
+              countryCode: "CY",
+              countryName: "Cyprus",
+              countryPPP: 0.606,
+              countryCurrency: "Euro",
+            },
+            {
+              countryCode: "CZ",
+              countryName: "Czech Republic",
+              countryPPP: 12.658,
+              countryCurrency: "CZK",
+            },
+            {
+              countryCode: "DK",
+              countryName: "Denmark",
+              countryPPP: 6.597,
+              countryCurrency: "DKK",
+            },
+            {
+              countryCode: "EE",
+              countryName: "Estonia",
+              countryPPP: 0.532,
+              countryCurrency: "Euro",
+            },
+            {
+              countryCode: "EA",
+              countryName: "Euro Area",
+              countryPPP: 0.706,
+              countryCurrency: "Euro",
+            },
+            {
+              countryCode: "EU",
+              countryName: "European Union",
+              countryPPP: 0.668,
+              countryCurrency: "Euro",
+            },
+            {
+              countryCode: "FI",
+              countryName: "Finland",
+              countryPPP: 0.84,
+              countryCurrency: "Euro",
+            },
+            {
+              countryCode: "FR",
+              countryName: "France",
+              countryPPP: 0.732,
+              countryCurrency: "Euro",
+            },
+            {
+              countryCode: "DE",
+              countryName: "Germany",
+              countryPPP: 0.746,
+              countryCurrency: "Euro",
+            },
+            {
+              countryCode: "GR",
+              countryName: "Greece",
+              countryPPP: 0.544,
+              countryCurrency: "Euro",
+            },
+            {
+              countryCode: "HK",
+              countryName: "Hong Kong",
+              countryPPP: 6.083,
+              countryCurrency: "HKD",
+            },
+            {
+              countryCode: "HU",
+              countryName: "Hungary",
+              countryPPP: 148.013,
+              countryCurrency: "HUF",
+            },
+            {
+              countryCode: "IS",
+              countryName: "Iceland",
+              countryPPP: 145.342,
+              countryCurrency: "ISK",
+            },
+            {
+              countryCode: "IN",
+              countryName: "India",
+              countryPPP: 21.99,
+              countryCurrency: "INR",
+            },
+            {
+              countryCode: "ID",
+              countryName: "Indonesia",
+              countryPPP: 4673.649,
+              countryCurrency: "IDR",
+            },
+            {
+              countryCode: "IE",
+              countryName: "Ireland",
+              countryPPP: 0.784,
+              countryCurrency: "Euro",
+            },
+            {
+              countryCode: "IL",
+              countryName: "Israel",
+              countryPPP: 3.587,
+              countryCurrency: "ILS",
+            },
+            {
+              countryCode: "IT",
+              countryName: "Italy",
+              countryPPP: 0.663,
+              countryCurrency: "Euro",
+            },
+            {
+              countryCode: "JP",
+              countryName: "Japan",
+              countryPPP: 102.835,
+              countryCurrency: "JPY",
+            },
+            {
+              countryCode: "KR",
+              countryName: "Korea",
+              countryPPP: 861.824,
+              countryCurrency: "KRW",
+            },
+            {
+              countryCode: "LV",
+              countryName: "Latvia",
+              countryPPP: 0.482,
+              countryCurrency: "Euro",
+            },
+            {
+              countryCode: "LT",
+              countryName: "Lithuania",
+              countryPPP: 0.452,
+              countryCurrency: "Euro",
+            },
+            {
+              countryCode: "LU",
+              countryName: "Luxembourg",
+              countryPPP: 0.857,
+              countryCurrency: "Euro",
+            },
+            {
+              countryCode: "MG",
+              countryName: "Madagascar",
+              countryPPP: 1064.351,
+              countryCurrency: "MGA",
+            },
+            {
+              countryCode: "MT",
+              countryName: "Malta",
+              countryPPP: 0.573,
+              countryCurrency: "Euro",
+            },
+            {
+              countryCode: "MX",
+              countryName: "Mexico",
+              countryPPP: 9.522,
+              countryCurrency: "MXN",
+            },
+            {
+              countryCode: "MA",
+              countryName: "Morocco",
+              countryPPP: 3.97,
+              countryCurrency: "MAD",
+            },
+            {
+              countryCode: "NL",
+              countryName: "Netherlands",
+              countryPPP: 0.773,
+              countryCurrency: "Euro",
+            },
+            {
+              countryCode: "NZ",
+              countryName: "New Zealand",
+              countryPPP: 1.445,
+              countryCurrency: "NZD",
+            },
+            {
+              countryCode: "MK",
+              countryName: "North Macedonia",
+              countryPPP: 18.829,
+              countryCurrency: "MKD",
+            },
+            {
+              countryCode: "NO",
+              countryName: "Norway",
+              countryPPP: 10.026,
+              countryCurrency: "NOK",
+            },
+            {
+              countryCode: "NO",
+              countryName: "Peru",
+              countryPPP: 1.742,
+              countryCurrency: "PEN",
+            },
+            {
+              countryCode: "PL",
+              countryName: "Poland",
+              countryPPP: 1.782,
+              countryCurrency: "PLN",
+            },
+            {
+              countryCode: "PT",
+              countryName: "Portugal",
+              countryPPP: 0.57,
+              countryCurrency: "Euro",
+            },
+            {
+              countryCode: "RO",
+              countryName: "Romania",
+              countryPPP: 1.713,
+              countryCurrency: "RON",
+            },
+            {
+              countryCode: "RU",
+              countryName: "Russia",
+              countryPPP: 25.881,
+              countryCurrency: "RUB",
+            },
+            {
+              countryCode: "SA",
+              countryName: "Saudi Arabia",
+              countryPPP: 1.613,
+              countryCurrency: "SAR",
+            },
+            {
+              countryCode: "SG",
+              countryName: "Singapore",
+              countryPPP: 0.881,
+              countryCurrency: "SGD",
+            },
+            {
+              countryCode: "SK",
+              countryName: "Slovak Republic",
+              countryPPP: 0.527,
+              countryCurrency: "Euro",
+            },
+            {
+              countryCode: "SI",
+              countryName: "Slovenia",
+              countryPPP: 0.557,
+              countryCurrency: "Euro",
+            },
+            {
+              countryCode: "ZA",
+              countryName: "South Africa",
+              countryPPP: 6.933,
+              countryCurrency: "ZAR",
+            },
+            {
+              countryCode: "ES",
+              countryName: "Spain",
+              countryPPP: 0.618,
+              countryCurrency: "Euro",
+            },
+            {
+              countryCode: "SE",
+              countryName: "Sweden",
+              countryPPP: 8.765,
+              countryCurrency: "SEK",
+            },
+            {
+              countryCode: "CH",
+              countryName: "Switzerland",
+              countryPPP: 1.139,
+              countryCurrency: "CHF",
+            },
+            {
+              countryCode: "TR",
+              countryName: "Turkey",
+              countryPPP: 2.129,
+              countryCurrency: "TRY",
+            },
+            {
+              countryCode: "GB",
+              countryName: "United Kingdom",
+              countryPPP: 0.7,
+              countryCurrency: "GBP",
+            },
+            {
+              countryCode: "USA",
+              countryName: "United States of America",
+              countryPPP: 1.0,
+              countryCurrency: "USD",
+            },
+            {
+              countryCode: "ZM",
+              countryName: "Zambia",
+              countryPPP: 4.475,
+              countryCurrency: "ZMK",
+            },
+          ],
+        },
+        computed: {
+          destinationPrice() {
+            return (
+              (this.sourcePrice / this.sourceSelected.countryPPP) *
+              this.destinationSelected.countryPPP
+            ).toFixed(2);
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
