@@ -45,7 +45,8 @@ a:hover {
 .container__3D_Printing:before,
 .container__Monitoring:before,
 .container__pricing:before,
-.container__publishing:before {
+.container__publishing:before,
+.container__audio:before {
   position: absolute;
   right: 0;
   bottom: 100%;
@@ -83,7 +84,8 @@ a:hover {
 .container__3D_Printing div,
 .container__Monitoring div,
 .container__pricing div,
-.container__publishing div {
+.container__publishing div,
+.container__audio div {
   line-height: 2;
   background: #e7e6e1;
   padding: 1.2rem 1rem;
@@ -508,6 +510,20 @@ p {
   text-align: left;
   margin: 0 1rem;
 }
+.container__audio {
+  display: flex;
+  border-radius: 8px;
+  padding: 1.5rem;
+  background: #e2e1db;
+  position: relative;
+}
+.container__audio:before {
+  content: 'Audio';
+}
+.container__audio div {
+  text-align: left;
+  margin: 0 1rem;
+}
 footer {
   padding: 0 0 1.5em 1.5em;
 }
@@ -544,7 +560,8 @@ footer a:hover {
   .container__3D_Printing,
   .container__Monitoring,
   .container__pricing,
-  .container__publishing {
+  .container__publishing,
+  .container__audio {
     flex-direction: column;
   }
   .container__validation div,
@@ -573,7 +590,8 @@ footer a:hover {
   .container__3D_Printing div,
   .container__Monitoring div,
   .container__pricing div,
-  .container__publishing div {
+  .container__publishing div,
+  .container__audio div {
     margin: 1rem 0;
   }
 }
@@ -620,7 +638,8 @@ footer a:hover {
   .container__3D_Printing:before,
   .container__Monitoring:before,
   .container__pricing:before,
-  .container__publishing:before {
+  .container__publishing:before,
+  .container__audio:before {
     color: #212121;
     background: #f2a365;
   }
@@ -651,7 +670,8 @@ footer a:hover {
   .container__3D_Printing div,
   .container__Monitoring div,
   .container__pricing div,
-  .container__publishing div {
+  .container__publishing div,
+  .container__audio div {
     background: #222831;
   }
   .container {
@@ -706,7 +726,8 @@ footer a:hover {
   .container__3D_Printing,
   .container__Monitoring,
   .container__pricing,
-  .container__publishing {
+  .container__publishing,
+  .container__audio {
     background: #33313b;
   }
   footer p {
@@ -756,7 +777,8 @@ footer a:hover {
   .container__3D_Printing:before,
   .container__Monitoring:before,
   .container__pricing:before,
-  .container__publishing:before {
+  .container__publishing:before,
+  .container__audio:before {
     color: #e7e6e1;
     background: #f57c00;
   }
@@ -787,7 +809,8 @@ footer a:hover {
   .container__3D_Printing div,
   .container__Monitoring div,
   .container__pricing div,
-  .container__publishing div {
+  .container__publishing div,
+  .container__audio div {
     background: #e7e6e1;
   }
   .container {
@@ -819,7 +842,8 @@ footer a:hover {
   .container__3D_Printing,
   .container__Monitoring,
   .container__pricing,
-  .container__publishing {
+  .container__publishing,
+  .container__audio {
     background: #e2e1db;
   }
 }
