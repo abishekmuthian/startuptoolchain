@@ -14,33 +14,39 @@ function processSupport(form) {
   }
 
   if (currency == "usd" && duration == "onetime") {
-    window.location.replace("https://buy.stripe.com/eVag0P2HtcoqdaMbIL");
+    window.location.replace("https://buy.stripe.com/7sIeYK9EI0up1XibJ8");
   }
   if (currency == "usd" && duration == "monthly") {
-    window.location.replace("https://buy.stripe.com/aEU7uj81N7467Qs4gi");
+    window.location.replace("");
   }
   if (currency == "cad" && duration == "onetime") {
-    window.location.replace("https://buy.stripe.com/eVag0P1DpgEGeeQ5ku");
+    window.location.replace("https://buy.stripe.com/00g6seg36elf9pK5kI");
   }
   if (currency == "cad" && duration == "monthly") {
-    window.location.replace("https://buy.stripe.com/9AQbKz4PBcoqdaM28j");
+    window.location.replace("");
   }
   if (currency == "eur" && duration == "onetime") {
-    window.location.replace("https://buy.stripe.com/7sI5mb3Lxdsu3Ac28g");
+    window.location.replace("https://buy.stripe.com/5kAbMy8AEelfgSc28z");
   }
   if (currency == "eur" && duration == "monthly") {
-    window.location.replace("https://buy.stripe.com/5kAcOD4PB7461s4fZ7");
+    window.location.replace("");
   }
   if (currency == "aud" && duration == "onetime") {
-    window.location.replace("https://buy.stripe.com/28o29Z1Dp9ceeeQ28k");
+    window.location.replace("https://buy.stripe.com/eVa2bY7wA3GBfO89B2");
   }
   if (currency == "aud" && duration == "monthly") {
-    window.location.replace("https://buy.stripe.com/fZe15VbdZ6027QsbIV");
+    window.location.replace("");
   }
   if (currency == "inr" && duration == "onetime") {
-    window.location.replace("https://buy.stripe.com/9AQeWL2Htdsu4Eg6ou");
+    window.location.replace("https://buy.stripe.com/9AQ03QaIMa4Z6dybJ7");
   }
   if (currency == "inr" && duration == "monthly") {
-    window.location.replace("https://buy.stripe.com/aEU4i76XJagidaM28f");
+    window.location.replace("");
+  }
+  if (currency == "gbp" && duration == "onetime") {
+    window.location.replace("https://buy.stripe.com/eVa7wi3gk0up9pK5kN");
+  }
+  if (currency == "gbp" && duration == "monthly") {
+    window.location.replace("");
   }
 }
