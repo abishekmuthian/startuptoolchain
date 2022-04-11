@@ -731,6 +731,28 @@ p {
     }
 }
 
+.container__wellbeing {
+    // display the contents of the first container in a single row
+    display: flex;
+    border-radius: 8px;
+    padding: 1.5rem;
+    background: darken(color-card, 2.5%);
+    // position relative for the pseudo element
+    position: relative;
+
+    &:before {
+        @extend .tooltip;
+        content: 'Wellbeing';
+    }
+
+    div {
+        // beside the properties shared by all cards, move the text to the left and separate the containers horizontally
+        @extend .card;
+        text-align: left;
+        margin: 0 1rem;
+    }
+}
+
 
 footer {
     padding: 0 0 1.5em 1.5em;
@@ -746,7 +768,7 @@ footer a:hover {
 
 // on smaller viewports lay the three cards on top of one another
 @media (max-width: 1160px) {
-    .container__validation, .container__startup-coaching, .container__teambuilding, .container__promotion, .container__cloud, .container__container, .container__website, .container__design, .container__payments, .container__management, .container__investment, .container__incorporation, .container__email, .container__remote-work, .container__finance, .container__marketing, .container__legal, .container__analytics, .container__operations, .container__datascience, .container__manufacturing, .container__software-development, .container__equity, .container__3D_Printing, .container__Monitoring, .container__pricing, .container__publishing, .container__audio {
+    .container__validation, .container__startup-coaching, .container__teambuilding, .container__promotion, .container__cloud, .container__container, .container__website, .container__design, .container__payments, .container__management, .container__investment, .container__incorporation, .container__email, .container__remote-work, .container__finance, .container__marketing, .container__legal, .container__analytics, .container__operations, .container__datascience, .container__manufacturing, .container__software-development, .container__equity, .container__3D_Printing, .container__Monitoring, .container__pricing, .container__publishing, .container__audio, .container__wellbeing {
         flex-direction: column;
 
         div {
@@ -810,7 +832,7 @@ footer a:hover {
         color: color-text-dark-mode;
     }
 
-    .container__validation, .container__startup-coaching, .container__teambuilding, .container__promotion, .container__cloud, .container__container, .container__website, .container__design, .container__payments, .container__management, .container__investment, .container__incorporation, .container__email, .container__remote-work, .container__finance, .container__marketing, .container__legal, .container__analytics, .container__operations, .container__datascience, .container__manufacturing, .container__software-development, .container__equity, .container__3D_Printing, .container__Monitoring, .container__pricing, .container__publishing, .container__audio {
+    .container__validation, .container__startup-coaching, .container__teambuilding, .container__promotion, .container__cloud, .container__container, .container__website, .container__design, .container__payments, .container__management, .container__investment, .container__incorporation, .container__email, .container__remote-work, .container__finance, .container__marketing, .container__legal, .container__analytics, .container__operations, .container__datascience, .container__manufacturing, .container__software-development, .container__equity, .container__3D_Printing, .container__Monitoring, .container__pricing, .container__publishing, .container__audio, .container__wellbeing {
         background: color-card-inner-container-dark-mode;
 
         &:before {
@@ -854,7 +876,7 @@ footer a:hover {
         background: color-card;
     }
 
-    .container__validation, .container__startup-coaching, .container__teambuilding, .container__promotion, .container__cloud, .container__container, .container__website, .container__design, .container__payments, .container__management, .container__investment, .container__incorporation, .container__email, .container__remote-work, .container__finance, .container__marketing, .container__legal, .container__analytics, .container__operations, .container__datascience, .container__manufacturing, .container__software-development, .container__equity, .container__3D_Printing, .container__Monitoring, .container__pricing, .container__publishing, .container__audio {
+    .container__validation, .container__startup-coaching, .container__teambuilding, .container__promotion, .container__cloud, .container__container, .container__website, .container__design, .container__payments, .container__management, .container__investment, .container__incorporation, .container__email, .container__remote-work, .container__finance, .container__marketing, .container__legal, .container__analytics, .container__operations, .container__datascience, .container__manufacturing, .container__software-development, .container__equity, .container__3D_Printing, .container__Monitoring, .container__pricing, .container__publishing, .container__audio, .container__wellbeing {
         background: darken(color-card, 2.5%);
 
         &:before {

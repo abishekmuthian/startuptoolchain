@@ -46,7 +46,8 @@ a:hover {
 .container__Monitoring:before,
 .container__pricing:before,
 .container__publishing:before,
-.container__audio:before {
+.container__audio:before,
+.container__wellbeing:before {
   position: absolute;
   right: 0;
   bottom: 100%;
@@ -85,7 +86,8 @@ a:hover {
 .container__Monitoring div,
 .container__pricing div,
 .container__publishing div,
-.container__audio div {
+.container__audio div,
+.container__wellbeing div {
   line-height: 2;
   background: #e7e6e1;
   padding: 1.2rem 1rem;
@@ -524,6 +526,20 @@ p {
   text-align: left;
   margin: 0 1rem;
 }
+.container__wellbeing {
+  display: flex;
+  border-radius: 8px;
+  padding: 1.5rem;
+  background: #e2e1db;
+  position: relative;
+}
+.container__wellbeing:before {
+  content: 'Wellbeing';
+}
+.container__wellbeing div {
+  text-align: left;
+  margin: 0 1rem;
+}
 footer {
   padding: 0 0 1.5em 1.5em;
 }
@@ -561,7 +577,8 @@ footer a:hover {
   .container__Monitoring,
   .container__pricing,
   .container__publishing,
-  .container__audio {
+  .container__audio,
+  .container__wellbeing {
     flex-direction: column;
   }
   .container__validation div,
@@ -591,7 +608,8 @@ footer a:hover {
   .container__Monitoring div,
   .container__pricing div,
   .container__publishing div,
-  .container__audio div {
+  .container__audio div,
+  .container__wellbeing div {
     margin: 1rem 0;
   }
 }
@@ -639,7 +657,8 @@ footer a:hover {
   .container__Monitoring:before,
   .container__pricing:before,
   .container__publishing:before,
-  .container__audio:before {
+  .container__audio:before,
+  .container__wellbeing:before {
     color: #212121;
     background: #f2a365;
   }
@@ -671,7 +690,8 @@ footer a:hover {
   .container__Monitoring div,
   .container__pricing div,
   .container__publishing div,
-  .container__audio div {
+  .container__audio div,
+  .container__wellbeing div {
     background: #222831;
   }
   .container {
@@ -727,7 +747,8 @@ footer a:hover {
   .container__Monitoring,
   .container__pricing,
   .container__publishing,
-  .container__audio {
+  .container__audio,
+  .container__wellbeing {
     background: #33313b;
   }
   footer p {
@@ -778,7 +799,8 @@ footer a:hover {
   .container__Monitoring:before,
   .container__pricing:before,
   .container__publishing:before,
-  .container__audio:before {
+  .container__audio:before,
+  .container__wellbeing:before {
     color: #e7e6e1;
     background: #f57c00;
   }
@@ -810,7 +832,8 @@ footer a:hover {
   .container__Monitoring div,
   .container__pricing div,
   .container__publishing div,
-  .container__audio div {
+  .container__audio div,
+  .container__wellbeing div {
     background: #e7e6e1;
   }
   .container {
@@ -843,7 +866,8 @@ footer a:hover {
   .container__Monitoring,
   .container__pricing,
   .container__publishing,
-  .container__audio {
+  .container__audio,
+  .container__wellbeing {
     background: #e2e1db;
   }
 }
